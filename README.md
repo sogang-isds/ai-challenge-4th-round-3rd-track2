@@ -53,3 +53,126 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
   ```
 
   
+
+## 분류 
+
+위협 상황은 아래와 같이 5가지의 클래스로 분류됩니다. 
+
+- 020121 : 협박
+- 000001 : 해당 없음 
+- 02051 : 갈취공갈
+- 020811 : 직장내 괴롭힘
+- 020819 : 기타 괴롭힘 
+
+
+
+## 실행 
+
+
+
+#### 텍스트 추론
+
+- 아래와 같이 실행합니다.
+
+  ```
+  python predict.py
+  ```
+
+
+
+- 실행을 하면 아래와 같이 프롬프트가 나타나며, 여기에 샘플 텍스트를 입력합니다.
+
+  ```
+  INPUT> 강대리 네 과장님 부르셨습니까 강대리 이 머리 꼬라지가 뭐야 네 제 머리에 무슨 문제라도 있습니까 강대리 일을 못하면 단정하기라도 하던가 회사 출근할 때 머리도안감고 뭐하는거야 꼬질꼬질 해가지고는 신경 좀 써 과장님 요즘 강대리 집사람하고 사이가 안 좋다고 합니다 그럼 그렇지 집안도 제대로 건사하지 못하는 게 회사 일이라고 똑 부러지게 하겠냐 죄송합니다 오늘 아침부터 강대리 꼬라지 보니까 기분이 팍 상하네
+  ```
+
+  
+
+- 결과로 클래스 분류코드와 폭력 분류명이 출력됩니다.
+
+  ```
+  020811, 직장내괴롭힘
+  ```
+
+  
+
+#### 오디오 추론
+
+오디오 추론에서는 샘플 오디오파일을 분할 및 음성인식 후 텍스트 추론단계를 거쳐 결과를 출력합니다. 
+
+- 아래와 같이 실행합니다.
+
+  ```
+  python predict_audio.py
+  ```
+
+  
+
+- 실행을 하면 아래와 같이 프롬프트가 나타나며, 여기에 샘플 데이터 경로를 입력합니다. 
+
+  ```
+  파일 경로를 입력하세요.
+  INPUT> sample_data/t2_001.wav
+  ```
+
+  
+
+- 실행 결과는 아래와 같습니다. 
+
+- 
+
+  ```
+  Audio splitting...
+  splitted : ./tmp/chunk_000.wav, 0.00 - 1.19
+  splitted : ./tmp/chunk_001.wav, 1.19 - 2.86
+  splitted : ./tmp/chunk_002.wav, 2.86 - 4.03
+  splitted : ./tmp/chunk_003.wav, 4.03 - 5.23
+  splitted : ./tmp/chunk_004.wav, 5.23 - 6.14
+  splitted : ./tmp/chunk_005.wav, 6.14 - 7.74
+  splitted : ./tmp/chunk_006.wav, 7.74 - 8.56
+  splitted : ./tmp/chunk_007.wav, 8.56 - 10.62
+  splitted : ./tmp/chunk_008.wav, 10.62 - 11.77
+  splitted : ./tmp/chunk_009.wav, 11.77 - 15.02
+  splitted : ./tmp/chunk_010.wav, 15.02 - 18.18
+  splitted : ./tmp/chunk_011.wav, 18.18 - 19.71
+  splitted : ./tmp/chunk_012.wav, 19.71 - 21.98
+  splitted : ./tmp/chunk_013.wav, 21.98 - 25.79
+  splitted : ./tmp/chunk_014.wav, 25.79 - 31.92
+  splitted : ./tmp/chunk_015.wav, 31.92 - 33.08
+  splitted : ./tmp/chunk_016.wav, 33.08 - 38.69
+  
+  Speech recognizing...
+  recognized :./tmp/chunk_000.wav, 
+  recognized :./tmp/chunk_001.wav, 강 대리
+  recognized :./tmp/chunk_002.wav, 예 과장님
+  recognized :./tmp/chunk_003.wav, 불렀으니까
+  recognized :./tmp/chunk_004.wav, 강 대리
+  recognized :./tmp/chunk_005.wav, 이 머리 꼬라지가 뭐야
+  recognized :./tmp/chunk_006.wav, 예
+  recognized :./tmp/chunk_007.wav, 제 머리에 무슨 문제라도 있으니
+  recognized :./tmp/chunk_008.wav, 강 대리
+  recognized :./tmp/chunk_009.wav, 일을 못 하면 단정하게 하도 하든가
+  recognized :./tmp/chunk_010.wav, 회사 출근할 때 머리도 안 감고 뭐 하는 거야
+  recognized :./tmp/chunk_011.wav, 꼬질꼬질 해 가지고
+  recognized :./tmp/chunk_012.wav, 신경 좀 써
+  recognized :./tmp/chunk_013.wav, 요즘 강대리 집사람하고 사이가 안 좋다
+  recognized :./tmp/chunk_014.wav, 그럼 그렇지 집안도 제대로 검사 하지 못하는게 회사 일이 너무 똑부러지게 하겠어
+  recognized :./tmp/chunk_015.wav, 죄송합니다
+  recognized :./tmp/chunk_016.wav, 오늘 아침부터 강대리 꼬라지 보니까 기분이 팍 상하네
+  
+  Predicting...
+  020811, 직장내괴롭힘
+  ```
+
+  
+
+
+
+
+
+
+
+
+
+
+
