@@ -50,6 +50,10 @@ while True:
     try:
         print('\n파일 경로를 입력하세요.')
         input_file = get_word()
+
+        if input_file=='exit':
+            break
+
         text_list = predict(input_file)
 
         print('\nPredicting...')
