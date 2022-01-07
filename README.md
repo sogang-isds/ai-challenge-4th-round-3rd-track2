@@ -47,7 +47,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
   pip3 install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
   ```
 
-- python 필요한 패키지들을 설치합니다. 
+- 필요한 python 패키지들을 설치합니다. 
 
   ```
   pip install -r requirements.txt
@@ -167,7 +167,23 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
   ```
 
   
+## 응답 데이터 
 
+
+
+### code
+
+
+- E000 : 성공
+
+
+
+
+## Copyright
+
+
+
+본 프로젝트는 공개스포트웨어를 이용하여 개발하였으나, 데이터 처리 방법 및 모델 구현 등에 대한 저작권은 서강대학교 지능형 음성대화 인터페이스 연구실에 있습니다. 
 
 
 
