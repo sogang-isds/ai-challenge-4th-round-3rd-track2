@@ -26,11 +26,12 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
   https://drive.google.com/drive/folders/1Bwnoqo1fG3A97Dig-HqlgOqF0T-xDlx_?usp=sharing
 
-- 다운받은 모델파일과 샘플 데이터를 압축해제하여 `ai-challenge-4th-round-3rd-track2`디렉토리 밑에 위치시킵니다.
+- 다운받은 모델파일과 샘플 데이터를 압축해제하여 `ai-challenge-4th-round-3rd-track2`디렉토리 밑에 위치시킵니다. (기존의 폴더를 덮어씌웁니다.)
 
 - 최종적인 디렉토리 구성은 다음과 같습니다. 
 
-- <디렉토리 구성 완료된 사진>
+  ![image](https://user-images.githubusercontent.com/86367674/148506812-af63da94-d2b9-41ee-9785-af2914f80d3f.png)
+
 
 - python 가상 환경을 설치합니다.
 
@@ -46,7 +47,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
   pip3 install torch==1.10.1+cu113 torchvision==0.11.2+cu113 torchaudio==0.10.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
   ```
 
-- python 필요한 패키지들을 설치합니다. 
+- 필요한 python 패키지들을 설치합니다. 
 
   ```
   pip install -r requirements.txt
@@ -70,7 +71,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
 
 
-#### 텍스트 추론
+### 텍스트 추론
 
 - 아래와 같이 실행합니다.
 
@@ -96,7 +97,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
   
 
-#### 오디오 추론
+### 오디오 추론
 
 오디오 추론에서는 샘플 오디오파일을 분할 및 음성인식 후 텍스트 추론단계를 거쳐 결과를 출력합니다. 
 
@@ -119,7 +120,8 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
 - 실행 결과는 아래와 같습니다. 
 
-  ![predict_audio_demo](C:\Users\김민주\Documents\GitHub\ai-challenge-4th-round-3rd-track2-old\assets\predict_audio_demo.gif)
+ ![predict_audio_demo](https://user-images.githubusercontent.com/86367674/148507050-7c71b068-9b57-43d8-a2d7-2d3eb491362d.gif)
+
 
   ```
   Audio splitting...
@@ -165,7 +167,23 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
   ```
 
   
+## 응답 데이터 
 
+
+
+### code
+
+
+- E000 : 성공
+
+
+
+
+## Copyright
+
+
+
+본 프로젝트는 공개스포트웨어를 이용하여 개발하였으나, 데이터 처리 방법 및 모델 구현 등에 대한 저작권은 서강대학교 지능형 음성대화 인터페이스 연구실에 있습니다. 
 
 
 
