@@ -1,7 +1,4 @@
 .idea
-assets
-models
-sample_data
 tmp
 *.zip
 
