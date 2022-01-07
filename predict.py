@@ -16,6 +16,10 @@ tokenizer=AutoTokenizer.from_pretrained('monologg/koelectra-base-v3-discriminato
 while True:
     try:
         text=get_word()
+
+        if text=='exit':
+            break
+
         model.eval()
 
         model_input=tokenizer.encode_plus(text)
