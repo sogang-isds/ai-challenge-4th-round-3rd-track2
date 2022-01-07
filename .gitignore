@@ -1,6 +1,8 @@
 .idea
 tmp
 *.zip
+*.wav
+pytorch_model.bin
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,pycharm,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,pycharm,python
