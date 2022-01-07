@@ -30,7 +30,8 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
 - 최종적인 디렉토리 구성은 다음과 같습니다. 
 
-- <디렉토리 구성 완료된 사진>
+  ![image](https://user-images.githubusercontent.com/86367674/148506812-af63da94-d2b9-41ee-9785-af2914f80d3f.png)
+
 
 - python 가상 환경을 설치합니다.
 
