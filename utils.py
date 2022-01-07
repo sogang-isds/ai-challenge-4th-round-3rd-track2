@@ -21,3 +21,12 @@ def get_word():
         pass
     return word
 
+def recognize(file):
+    r = sr.Recognizer()
+    test_speech = sr.AudioFile(file)
+    with test_speech as source:
+        # r.adjust_for_ambient_noise(source)
+        audio = r.record(source)
+    result = r.recognize_google(audio, language='ko-KR', show_all=True)
+
+    return result
