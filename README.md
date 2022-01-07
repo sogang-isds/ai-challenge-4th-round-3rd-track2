@@ -26,7 +26,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
   https://drive.google.com/drive/folders/1Bwnoqo1fG3A97Dig-HqlgOqF0T-xDlx_?usp=sharing
 
-- 다운받은 모델파일과 샘플 데이터를 압축해제하여 `ai-challenge-4th-round-3rd-track2`디렉토리 밑에 위치시킵니다.
+- 다운받은 모델파일과 샘플 데이터를 압축해제하여 `ai-challenge-4th-round-3rd-track2`디렉토리 밑에 위치시킵니다. (기존의 폴더를 덮어씌웁니다.)
 
 - 최종적인 디렉토리 구성은 다음과 같습니다. 
 
