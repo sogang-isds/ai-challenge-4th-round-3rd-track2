@@ -7,16 +7,18 @@ from transformers import AutoTokenizer
 import time
 from audio_splitter_example import split_audio
 
-
+#label dict 불러오기
 label_dict=load_json(os.path.join('sample_data/label_dict.json'))
 label_list=[x for x, y in label_dict.items()]
 
+#modle 및 tokenizer 불러오기
 model_path=os.path.join('model')
 model=ElectraForSequenceClassification.from_pretrained(model_path)
 tokenizer=AutoTokenizer.from_pretrained('monologg/koelectra-base-v3-discriminator')
 
+
 def predict(input_file, tmp_path='./tmp'):
-    split_audio(input_file, dest_path=tmp_path)
+    split_audio(input_file, dest_path=tmp_path) #오디오 파일 분할
 
     files=os.listdir(tmp_path)
     files=sorted(files)
@@ -26,7 +28,7 @@ def predict(input_file, tmp_path='./tmp'):
     for file in files:
         wav_files.append(os.path.join(tmp_path, file))
 
-    print('\nSpeech recognizing...')
+    print('\nSpeech recognizing...') #speech to text
     trans = []
     for wav_file in wav_files:
         if not wav_file.split('/')[-1].startswith('chunk'):
@@ -46,6 +48,7 @@ def predict(input_file, tmp_path='./tmp'):
 
     return trans
 
+#음성인식 결과 text를 추론
 while True:
     try:
         print('\n파일 경로를 입력하세요.')
