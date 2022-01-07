@@ -71,7 +71,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
 
 
-#### 텍스트 추론
+### 텍스트 추론
 
 - 아래와 같이 실행합니다.
 
@@ -97,7 +97,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
   
 
-#### 오디오 추론
+### 오디오 추론
 
 오디오 추론에서는 샘플 오디오파일을 분할 및 음성인식 후 텍스트 추론단계를 거쳐 결과를 출력합니다. 
 
@@ -120,7 +120,8 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
 - 실행 결과는 아래와 같습니다. 
 
-  ![predict_audio_demo](C:\Users\김민주\Documents\GitHub\ai-challenge-4th-round-3rd-track2-old\assets\predict_audio_demo.gif)
+ ![predict_audio_demo](https://user-images.githubusercontent.com/86367674/148507050-7c71b068-9b57-43d8-a2d7-2d3eb491362d.gif)
+
 
   ```
   Audio splitting...
