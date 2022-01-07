@@ -119,7 +119,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 
 - 실행 결과는 아래와 같습니다. 
 
-- 
+  ![predict_audio_demo](C:\Users\김민주\Documents\GitHub\ai-challenge-4th-round-3rd-track2-old\assets\predict_audio_demo.gif)
 
   ```
   Audio splitting...
@@ -165,6 +165,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
   ```
 
   
+
 
 
 
