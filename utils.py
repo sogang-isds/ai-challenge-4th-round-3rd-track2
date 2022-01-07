@@ -3,7 +3,7 @@ import speech_recognition as sr
 
 
 def load_json(data_file):
-    with open(data_file, 'r', encoding='utf-8') as f:
+    with open(data_file, 'r', encoding="utf-8") as f:
         data = json.load(f)
 
     return data
@@ -14,7 +14,7 @@ def get_word():
     try:
         word = input("INPUT> ")
         if not issubclass(type(word), str):
-            word = str(word, encoding="cp949", errors="replace")
+            word = str(word, encoding="cp949", errors="replace") #utf-8 오류를 해결하기 위함
     except EOFError:
         pass
     if not word:
