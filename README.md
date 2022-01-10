@@ -19,7 +19,7 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 - 아래의 명령을 이용해 소스코드를 받습니다.
 
   ```
-  https://github.com/sogang-isds/ai-challenge-4th-round-3rd-track2.git
+  git clone https://github.com/sogang-isds/ai-challenge-4th-round-3rd-track2.git
   ```
 
 - 아래의 구글 드라이브 링크를 통해 모델파일과 샘플 데이터를 다운받습니다. 
@@ -181,25 +181,12 @@ API 형식으로 위협 상황을  인지할 수 있습니다.
 INPUT> exit
 ```
 
+## 참고자료
 
-
-
-
-## 응답 데이터 
-
-
-
-### code
-
-
-- E000 : 성공
-
-
+- [인공지능 그랜드 챌린지 4차 대회 2단계 트랙2](https://github.com/sogang-isds/ai-challenge-4th-round-2nd-track2) - 2단계 대회 때의 모델을 공개한 링크입니다.
 
 
 ## Copyright
-
-
 
 본 프로젝트는 공개스포트웨어를 이용하여 개발하였으나, 데이터 처리 방법 및 모델 구현 등에 대한 저작권은 서강대학교 지능형 음성대화 인터페이스 연구실에 있습니다. 
 
